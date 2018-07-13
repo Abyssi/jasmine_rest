@@ -3,17 +3,14 @@
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="spring-boot-dispatcherServletAutoConfiguration-mvc" name="JasmineRestApplication MVC" removed="true">
-          <file>file://$MODULE_DIR$/src/main/java/com/jasmine/jasmine_rest/JasmineRestApplication.java</file>
-        </fileset>
         <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/java/com/jasmine/jasmine_rest/configuration/AdditionalWebConfiguration.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/com/jasmine/jasmine_rest/JasmineRestApplication.java</file>
           <file>file://$MODULE_DIR$/src/main/java/com/jasmine/jasmine_rest/configuration/KafkaReceiverConfiguration.java</file>
           <file>file://$MODULE_DIR$/src/main/java/com/jasmine/jasmine_rest/configuration/LoggableDispatcherServlet.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/com/jasmine/jasmine_rest/configuration/MongoConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/jasmine/jasmine_rest/JasmineRestApplication.java</file>
           <file>file://$MODULE_DIR$/src/main/java/com/jasmine/jasmine_rest/configuration/RedisConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/jasmine/jasmine_rest/configuration/MongoConfiguration.java</file>
           <file>file://$MODULE_DIR$/src/main/java/com/jasmine/jasmine_rest/configuration/WebSocketConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/jasmine/jasmine_rest/configuration/AdditionalWebConfiguration.java</file>
         </fileset>
       </configuration>
     </facet>
