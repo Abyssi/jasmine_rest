@@ -14,5 +14,7 @@ public interface OutlierCrossroadsRepository extends MongoRepository<OutlierCros
 
     void deleteAllByTimestampLessThanAndTimeWindowMilliseconds(Long timestamp, Integer timeWindowMilliseconds);
 
-    Optional<OutlierCrossroads> findByBaseIdAndTimeWindowMilliseconds(String id, Integer timeWindowMilliseconds);
+    boolean existsByBaseIdAndTimeWindowMilliseconds(String id, Integer timeWindowMilliseconds);
+
+    void deleteByBaseIdAndTimeWindowMilliseconds(String id, Integer timeWindowMilliseconds);
 }

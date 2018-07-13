@@ -30,12 +30,8 @@ public class OutlierCrossroadsService {
 
     @Transactional
     public OutlierCrossroads save(OutlierCrossroads outlierCrossroads) {
-        Optional<OutlierCrossroads> found = outlierCrossroadsRepository.findByBaseIdAndTimeWindowMilliseconds(outlierCrossroads.getBase().getId(), outlierCrossroads.getTimeWindowMilliseconds());
-        if (found.isPresent()) {
-            found.get().setTimestamp(outlierCrossroads.getTimestamp());
-            found.get().setMedianVehiclesCount(outlierCrossroads.getMedianVehiclesCount());
-            return outlierCrossroadsRepository.save(found.get());
-        }
+        if (outlierCrossroadsRepository.existsByBaseIdAndTimeWindowMilliseconds(outlierCrossroads.getBase().getId(), outlierCrossroads.getTimeWindowMilliseconds()))
+            outlierCrossroadsRepository.deleteByBaseIdAndTimeWindowMilliseconds(outlierCrossroads.getBase().getId(), outlierCrossroads.getTimeWindowMilliseconds());
 
         return outlierCrossroadsRepository.save(outlierCrossroads);
     }
@@ -52,8 +48,8 @@ public class OutlierCrossroadsService {
 
     @Scheduled(cron = "* * * * * ?")
     public void purge() {
-        deleterOlderByTimeWindowMilliseconds(kafkaSmallWindow);
-        deleterOlderByTimeWindowMilliseconds(kafkaMediumWindow);
-        deleterOlderByTimeWindowMilliseconds(kafkaLargeWindow);
+        //deleterOlderByTimeWindowMilliseconds(kafkaSmallWindow);
+        //deleterOlderByTimeWindowMilliseconds(kafkaMediumWindow);
+        //deleterOlderByTimeWindowMilliseconds(kafkaLargeWindow);
     }
 }
