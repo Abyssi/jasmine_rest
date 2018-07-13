@@ -48,8 +48,8 @@ public class OutlierCrossroadsService {
 
     @Scheduled(cron = "* * * * * ?")
     public void purge() {
-        //deleterOlderByTimeWindowMilliseconds(kafkaSmallWindow);
-        //deleterOlderByTimeWindowMilliseconds(kafkaMediumWindow);
-        //deleterOlderByTimeWindowMilliseconds(kafkaLargeWindow);
+        deleterOlderByTimeWindowMilliseconds(kafkaSmallWindow);
+        deleterOlderByTimeWindowMilliseconds(kafkaMediumWindow);
+        deleterOlderByTimeWindowMilliseconds(kafkaLargeWindow);
     }
 }
