@@ -5,7 +5,7 @@
 
 	<groupId>com.jasmine</groupId>
 	<artifactId>jasmine_rest</artifactId>
-	<version>1.0.0</version>
+	<version>1.0</version>
 	<packaging>jar</packaging>
 
 	<name>JASMINE REST</name>
